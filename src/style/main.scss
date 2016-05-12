@@ -6,9 +6,21 @@ $small-screen: 600px;
   color: white;
   text-align: center;
   height: $carousel-height;
-  width: 100%;
-  background-size: cover;
   position: relative;
+  overflow: hidden;
+
+  &__backgrounds {
+    position: absolute;
+    height: $carousel-height;
+    z-index: -1;
+    transition: margin-left 1s;
+  }
+
+  &__background {
+    background-size: cover;
+    height: $carousel-height;
+    float: left;
+  }
 
   &__content {
     height: $carousel-height;
@@ -27,11 +39,11 @@ $small-screen: 600px;
     position: absolute;
 
     &--left {
-      top: $carousel-height/2 - 31px;
+      top: ($carousel-height/2)-31px;
       left: 0px;
     }
     &--right {
-      top: $carousel-height/2 - 31px;
+      top: ($carousel-height/2)-31px;
       right: 0px
     }
     &:hover {

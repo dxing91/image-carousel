@@ -39,13 +39,18 @@ export default class CarouselContainer extends Component {
   }
 
   render() {
-    const slideData = data.carousel[this.state.activeSlide];
+    const activeSlide = data.carousel[this.state.activeSlide];
+    let allBackgroundsArray = [];
+    for (let i = 0, x = data.carousel.length; i < x; i++) {
+      allBackgroundsArray.push(`url(/src/${data.carousel[i].imageurl})`);
+    }
+
     return(
       <Carousel
-        background={{ backgroundImage: `url(/src/${slideData.imageurl})` }}
-        title={slideData.title}
-        synopsis={slideData.synopsis}
-        link={`http://${slideData.link}`}
+        allBackgroundsArray={allBackgroundsArray}
+        title={activeSlide.title}
+        synopsis={activeSlide.synopsis}
+        link={`http://${activeSlide.link}`}
         totalSlides={data.carousel.length}
         activeSlide={this.state.activeSlide}
         onClickArrow={(direction) => this.handleClickArrow(direction)}
