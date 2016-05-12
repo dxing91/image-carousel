@@ -8,14 +8,12 @@ export default class CarouselContainer extends Component {
     this.state = {
       activeSlide: 0
     };
-  }
-
-  componentDidMount() {
-    setTimeout(() => this.handleClickArrow('right'), 5000);
+    this.timer = setInterval(() => this.handleClickArrow('right'), 5000);
   }
 
   componentDidUpdate() {
-    setTimeout(() => this.handleClickArrow('right'), 5000);
+    clearInterval(this.timer);
+    this.timer = setInterval(() => this.handleClickArrow('right'), 5000);
   }
 
   handleClickArrow(direction) {
