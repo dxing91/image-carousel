@@ -1,0 +1,101 @@
+$carousel-height: 700px;
+$small-screen: 600px;
+
+.carousel {
+  font-family: Verdana, Arial, sans-serif;
+  color: white;
+  text-align: center;
+  height: $carousel-height;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+
+  &__content {
+    height: $carousel-height;
+    width:  100%;
+    display: table;
+  }
+
+  &__text {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__button {
+    cursor: pointer;
+    padding: 30px;
+    position: absolute;
+
+    &--left {
+      top: $carousel-height/2 - 31px;
+      left: 0px;
+    }
+    &--right {
+      top: $carousel-height/2 - 31px;
+      right: 0px
+    }
+    &:hover {
+      background-color: rgba(255,255,255,0.3);
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+  }
+
+  &__dot {
+    cursor: pointer;
+    padding: 0 5px;
+    opacity: 0.5;
+    width: 10px;
+    height: 10px;
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__h1 {
+    font-size: 60px;
+    color: white;
+    display: inline-block;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
+    max-width: 80%;
+
+    @media (max-width: $small-screen) {
+      font-size: 36px;
+    }
+  }
+
+  &__h4 {
+    font-size: 24px;
+    font-weight: 300;
+    padding: 10px;
+    max-width: 80%;
+    background-color: rgba(0,0,0,0.5);
+    display: inline-block;
+
+    @media (max-width: $small-screen) {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    background-color: rgba(255,165,0,1);
+
+    &-div {
+      margin: 30px
+    }
+    &:hover {
+      background-color: rgba(255,183,51,1);
+    }
+  }
+}
