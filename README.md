@@ -1,5 +1,7 @@
 # Image Carousel
 
+An application of an image carousel built using React.
+
 ## Using the Application
 
 To use application:
