@@ -1,5 +1,9 @@
 {
   "name": "image-carousel",
   "description": "An application of an image carousel built using React.",
-  "repository": "https://github.com/dxing91/image-carousel"
+  "repository": "https://github.com/dxing91/image-carousel",
+  "engines": {
+    "node": "5.6.0",
+    "npm": "3.6.0"
+  }
 }

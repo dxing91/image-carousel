@@ -15,6 +15,7 @@ module.exports = {
     path: __dirname + '/dist',
     filename: 'index_bundle.js'
   },
+  devtool: 'eval',
   module: {
     loaders: [
       {test: /\.json$/, loaders: ['json']},
