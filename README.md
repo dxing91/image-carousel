@@ -1,6 +1,6 @@
-## Image Carousel
+# Image Carousel
 
-# Using the Application
+## Using the Application
 
 To use application:
 - Open terminal.
@@ -10,6 +10,6 @@ To use application:
 - Carousel can be navigated with the arrows on the sides or the dots on the bottom.
 - To use different data files, upload your 'data.json' file to the '/src/' directory.
 
-Alternative deployment:
+## Alternative deployment:
 - Alternatively, deploy the application to Heroku using the button below.
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
